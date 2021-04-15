@@ -1,0 +1,6 @@
+D:\VisualProjects\TheSnakeGame-master\TheSnakeGame-master\TheSnakeGame\x64\Debug\TheSnakeGame.vcxprojAssemblyReference.cache
+D:\VisualProjects\TheSnakeGame-master\TheSnakeGame-master\TheSnakeGame\x64\Debug\TheSnakeGame.MyForm.resources
+D:\VisualProjects\TheSnakeGame-master\TheSnakeGame-master\TheSnakeGame\x64\Debug\TheSnakeGame.vcxproj.GenerateResource.cache
+D:\VisualProjects\games\TheSnakeGame\TheSnakeGame\x64\Debug\TheSnakeGame.vcxprojAssemblyReference.cache
+D:\VisualProjects\games\TheSnakeGame\TheSnakeGame\x64\Debug\TheSnakeGame.MyForm.resources
+D:\VisualProjects\games\TheSnakeGame\TheSnakeGame\x64\Debug\TheSnakeGame.vcxproj.GenerateResource.cache
