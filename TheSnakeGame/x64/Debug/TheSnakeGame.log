@@ -1,8 +1,0 @@
-﻿  MyForm.cpp
-D:\VisualProjects\games\TheSnakeGame\TheSnakeGame\MyForm.cpp(8,33): warning C4829: Возможно, неправильные параметры функции main. Рекомендуемый вариант - "int main(Platform::Array<Platform::String^>^ argv)"
-D:\VisualProjects\games\TheSnakeGame\TheSnakeGame\MyForm.cpp(156,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\VisualProjects\games\TheSnakeGame\TheSnakeGame\MyForm.cpp(245,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
-  Создание кода...
-  MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
-  TheSnakeGame.vcxproj -> D:\VisualProjects\games\TheSnakeGame\x64\Debug\TheSnakeGame.exe
