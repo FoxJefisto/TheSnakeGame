@@ -371,7 +371,6 @@ namespace TheSnakeGame {
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Змейка";
-			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &MyForm::MyForm_KeyDown);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
@@ -399,7 +398,8 @@ namespace TheSnakeGame {
 			 int step = 10; //шаг
 			 float updateInterval = 100; //интервал обновления
 			 int score = 0; //счет
-			 String^ imgSerpens;
+	public:
+			 String^ imgSerpens = "D:\\VisualProjects\\games\\TheSnakeGame\\tail.png";
 			 array<String^>^ imgApples;
 			 String^ imgHead1 = "D:\\VisualProjects\\games\\TheSnakeGame\\head1.png";
 			 String^ imgHead2 = "D:\\VisualProjects\\games\\TheSnakeGame\\head2.png";
@@ -432,8 +432,8 @@ namespace TheSnakeGame {
 
 	//Событие по обновлению игры - указывается в timer
 	private: void MyForm_Update(Object^ object, EventArgs^ e);
-private: System::Void buttonEdit_Click(System::Object^ sender, System::EventArgs^ e);
-private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
-}
+	private: System::Void buttonEdit_Click(System::Object^ sender, System::EventArgs^ e);
+	//----------------------------------------
+	//Изменение внешнего вида
 };
 }

@@ -1,4 +1,5 @@
 #include "MyForm.h"
+#include "MyForm1.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -81,7 +82,7 @@ void TheSnakeGame::MyForm::Eating()
 		Serpens[score]->Width = step;
 		Serpens[score]->Height = step;
 		this->Controls->Add(Serpens[score]);
-		fruit->Image = gcnew Bitmap(imgApples[score%7]);
+		fruit->Image = gcnew Bitmap(imgApples[score % 7]);
 
 		GeneratePositionFruit();
 	}
@@ -307,11 +308,8 @@ void TheSnakeGame::MyForm::MyForm_Update(Object^ object, EventArgs^ e)
 
 System::Void TheSnakeGame::MyForm::buttonEdit_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	OpenFileDialog^ ofd = gcnew OpenFileDialog();
-	ofd->Filter = "Image Files (*BMP;*.JPG;*.GIF;*.PNG)|*BMP;*.JPG;*.GIF;*.PNG|All Files (*.*)|*.*";
-	ofd->ShowDialog();
-	imgSerpens = ofd->FileName;
-	for(int i = score; i >= 1; i--)
-		Serpens[i]->Image = gcnew Bitmap(imgSerpens);
+	MyForm1^ form1 = gcnew MyForm1();
+	form1->ShowDialog();
+
 	return System::Void();
 }
