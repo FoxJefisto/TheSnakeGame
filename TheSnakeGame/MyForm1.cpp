@@ -7,7 +7,15 @@ TheSnakeGame::MyForm1::MyForm1()
 		imgHead = "D:\\VisualProjects\\games\\TheSnakeGame\\head2.png";
 		imgTail = "D:\\VisualProjects\\games\\TheSnakeGame\\tail.png";
 		EditSerpens();
-}		
+}
+
+TheSnakeGame::MyForm1::MyForm1(String^ img)
+{
+	InitializeComponent();
+	imgHead = "D:\\VisualProjects\\games\\TheSnakeGame\\head2.png";
+	imgTail = img;
+	EditSerpens();
+}
 
 void TheSnakeGame::MyForm1::EditSerpens()
 {
@@ -38,6 +46,7 @@ System::Void TheSnakeGame::MyForm1::buttonEditTail_Click(System::Object^ sender,
 	imgTail = ofd->FileName;
 	for (int i = 1; i < 10; i++)
 		SerpensCur[i]->Image = gcnew Bitmap(imgTail);
+	isEdit = true;
 	}
 	return System::Void();
 }

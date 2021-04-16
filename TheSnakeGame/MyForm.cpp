@@ -308,8 +308,11 @@ void TheSnakeGame::MyForm::MyForm_Update(Object^ object, EventArgs^ e)
 
 System::Void TheSnakeGame::MyForm::buttonEdit_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	MyForm1^ form1 = gcnew MyForm1();
+	MyForm1^ form1 = gcnew MyForm1(imgSerpens);
 	form1->ShowDialog();
-
+		imgSerpens = form1->GetImage();
+		if (form1->isEdit)
+			for (int i = 1; i <= score; i++)
+				Serpens[i]->Image = gcnew Bitmap(imgSerpens);
 	return System::Void();
 }

@@ -16,7 +16,7 @@ namespace TheSnakeGame {
 	{
 	public:
 		MyForm1();
-
+		MyForm1(String^ img);
 	protected:
 		/// <summary>
 		/// Освободить все используемые ресурсы.
@@ -90,10 +90,15 @@ namespace TheSnakeGame {
 	public:
 		String^ imgHead;
 		String^ imgTail;
+		bool isEdit = false;
 	private:
 		array<PictureBox^>^ SerpensCur;
 		int size = 10;
 		void EditSerpens(); //Анимация змеи
 	private: System::Void buttonEditTail_Click(System::Object^ sender, System::EventArgs^ e);
+	public:
+		String^ GetImage() {
+			return imgTail;
+		}
 	};
 }
