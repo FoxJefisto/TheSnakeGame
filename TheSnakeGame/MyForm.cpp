@@ -140,13 +140,13 @@ void TheSnakeGame::MyForm::NewGame()
 
 	//Инициализируем фрукт
 	imgApples = gcnew array <String^>(7);
-	imgApples[0] = "D:\\VisualProjects\\games\\TheSnakeGame\\apple1.png";
-	imgApples[1] = "D:\\VisualProjects\\games\\TheSnakeGame\\apple2.png";
-	imgApples[2] = "D:\\VisualProjects\\games\\TheSnakeGame\\apple3.png";
-	imgApples[3] = "D:\\VisualProjects\\games\\TheSnakeGame\\apple4.png";
-	imgApples[4] = "D:\\VisualProjects\\games\\TheSnakeGame\\apple5.png";
-	imgApples[5] = "D:\\VisualProjects\\games\\TheSnakeGame\\apple6.png";
-	imgApples[6] = "D:\\VisualProjects\\games\\TheSnakeGame\\apple7.png";
+	imgApples[0] = "img\\apple1.png";
+	imgApples[1] = "img\\apple2.png";
+	imgApples[2] = "img\\apple3.png";
+	imgApples[3] = "img\\apple4.png";
+	imgApples[4] = "img\\apple5.png";
+	imgApples[5] = "img\\apple6.png";
+	imgApples[6] = "img\\apple7.png";
 	fruit = gcnew PictureBox();
 	fruit->Image = gcnew Bitmap(imgApples[0]);
 	fruit->Width = step;

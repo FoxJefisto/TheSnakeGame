@@ -399,12 +399,12 @@ namespace TheSnakeGame {
 			 float updateInterval = 100; //интервал обновления
 			 int score = 0; //счет
 	public:
-			 String^ imgSerpens = "D:\\VisualProjects\\games\\TheSnakeGame\\tail.png";
+			 String^ imgSerpens = "img\\tail.png";
 			 array<String^>^ imgApples;
-			 String^ imgHead1 = "D:\\VisualProjects\\games\\TheSnakeGame\\head1.png";
-			 String^ imgHead2 = "D:\\VisualProjects\\games\\TheSnakeGame\\head2.png";
-			 String^ imgHead3 = "D:\\VisualProjects\\games\\TheSnakeGame\\head3.png";
-			 String^ imgHead4 = "D:\\VisualProjects\\games\\TheSnakeGame\\head4.png";
+			 String^ imgHead1 = "img\\head1.png";
+			 String^ imgHead2 = "img\\head2.png";
+			 String^ imgHead3 = "img\\head3.png";
+			 String^ imgHead4 = "img\\head4.png";
 
 	//-------------------
 	//Действия игры

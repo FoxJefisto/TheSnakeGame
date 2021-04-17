@@ -4,15 +4,15 @@
 TheSnakeGame::MyForm1::MyForm1()
 {
 		InitializeComponent();
-		imgHead = "D:\\VisualProjects\\games\\TheSnakeGame\\head2.png";
-		imgTail = "D:\\VisualProjects\\games\\TheSnakeGame\\tail.png";
+		imgHead = "img\\head2.png";
+		imgTail = "img\\tail.png";
 		EditSerpens();
 }
 
 TheSnakeGame::MyForm1::MyForm1(String^ img)
 {
 	InitializeComponent();
-	imgHead = "D:\\VisualProjects\\games\\TheSnakeGame\\head2.png";
+	imgHead = "img\\head2.png";
 	imgTail = img;
 	EditSerpens();
 }

@@ -29,5 +29,57 @@
     <ClInclude Include="MyForm1.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TheSnakeGame.rc">
+      <Filter>Файлы ресурсов</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="img\apple1.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="img\apple2.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="img\apple3.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="img\apple4.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="img\apple5.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="img\apple6.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="img\apple7.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="img\button.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="img\head1.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="img\head2.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="img\head3.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="img\head4.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="img\head5.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="img\tail.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
   </ItemGroup>
 </Project>
