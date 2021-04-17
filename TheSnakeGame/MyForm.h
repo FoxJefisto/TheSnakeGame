@@ -60,6 +60,7 @@ namespace TheSnakeGame {
 	private: System::Windows::Forms::Label^ labelGameOver;
 	private: System::Windows::Forms::Label^ labelCoordinates;
 	private: System::Windows::Forms::Button^ buttonEdit;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
 
 
 
@@ -122,6 +123,7 @@ namespace TheSnakeGame {
 			this->RightBorder = (gcnew System::Windows::Forms::PictureBox());
 			this->timer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->labelGameOver = (gcnew System::Windows::Forms::Label());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->menuStrip1->SuspendLayout();
 			this->groupBoxGameData->SuspendLayout();
 			this->groupBoxSettings->SuspendLayout();
@@ -130,6 +132,7 @@ namespace TheSnakeGame {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->LowerBorder))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->LeftBorder))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->RightBorder))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// menuStrip1
@@ -193,14 +196,13 @@ namespace TheSnakeGame {
 			// 
 			// groupBoxGameData
 			// 
-			this->groupBoxGameData->BackColor = System::Drawing::Color::Black;
-			this->groupBoxGameData->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"groupBoxGameData.BackgroundImage")));
+			this->groupBoxGameData->BackColor = System::Drawing::Color::Transparent;
 			this->groupBoxGameData->Controls->Add(this->labelCoordinates);
 			this->groupBoxGameData->Controls->Add(this->labelScore);
 			this->groupBoxGameData->ForeColor = System::Drawing::Color::Red;
-			this->groupBoxGameData->Location = System::Drawing::Point(60, 62);
+			this->groupBoxGameData->Location = System::Drawing::Point(30, 53);
 			this->groupBoxGameData->Name = L"groupBoxGameData";
-			this->groupBoxGameData->Size = System::Drawing::Size(245, 119);
+			this->groupBoxGameData->Size = System::Drawing::Size(328, 119);
 			this->groupBoxGameData->TabIndex = 1;
 			this->groupBoxGameData->TabStop = false;
 			this->groupBoxGameData->Text = L"Данные игры";
@@ -208,9 +210,9 @@ namespace TheSnakeGame {
 			// labelCoordinates
 			// 
 			this->labelCoordinates->AutoSize = true;
+			this->labelCoordinates->BackColor = System::Drawing::Color::Transparent;
 			this->labelCoordinates->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelCoordinates->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"labelCoordinates.Image")));
 			this->labelCoordinates->Location = System::Drawing::Point(6, 78);
 			this->labelCoordinates->Name = L"labelCoordinates";
 			this->labelCoordinates->Size = System::Drawing::Size(72, 23);
@@ -220,9 +222,9 @@ namespace TheSnakeGame {
 			// labelScore
 			// 
 			this->labelScore->AutoSize = true;
+			this->labelScore->BackColor = System::Drawing::Color::Transparent;
 			this->labelScore->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelScore->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"labelScore.Image")));
 			this->labelScore->Location = System::Drawing::Point(6, 26);
 			this->labelScore->Name = L"labelScore";
 			this->labelScore->Size = System::Drawing::Size(80, 23);
@@ -231,25 +233,24 @@ namespace TheSnakeGame {
 			// 
 			// groupBoxSettings
 			// 
-			this->groupBoxSettings->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"groupBoxSettings.BackgroundImage")));
+			this->groupBoxSettings->BackColor = System::Drawing::Color::Transparent;
 			this->groupBoxSettings->Controls->Add(this->buttonEdit);
 			this->groupBoxSettings->Controls->Add(this->buttonApplySpeed);
 			this->groupBoxSettings->Controls->Add(this->numericUpDownSpeedSnake);
 			this->groupBoxSettings->Controls->Add(this->label2);
 			this->groupBoxSettings->ForeColor = System::Drawing::Color::Red;
-			this->groupBoxSettings->Location = System::Drawing::Point(431, 44);
+			this->groupBoxSettings->Location = System::Drawing::Point(521, 53);
 			this->groupBoxSettings->Name = L"groupBoxSettings";
-			this->groupBoxSettings->Size = System::Drawing::Size(367, 119);
+			this->groupBoxSettings->Size = System::Drawing::Size(354, 119);
 			this->groupBoxSettings->TabIndex = 2;
 			this->groupBoxSettings->TabStop = false;
 			this->groupBoxSettings->Text = L"Настройки";
 			// 
 			// buttonEdit
 			// 
-			this->buttonEdit->BackColor = System::Drawing::Color::Black;
-			this->buttonEdit->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"buttonEdit.BackgroundImage")));
+			this->buttonEdit->BackColor = System::Drawing::Color::Transparent;
 			this->buttonEdit->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"buttonEdit.Image")));
-			this->buttonEdit->Location = System::Drawing::Point(34, 78);
+			this->buttonEdit->Location = System::Drawing::Point(22, 78);
 			this->buttonEdit->Name = L"buttonEdit";
 			this->buttonEdit->Size = System::Drawing::Size(148, 32);
 			this->buttonEdit->TabIndex = 5;
@@ -259,11 +260,10 @@ namespace TheSnakeGame {
 			// 
 			// buttonApplySpeed
 			// 
-			this->buttonApplySpeed->BackColor = System::Drawing::Color::Black;
-			this->buttonApplySpeed->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"buttonApplySpeed.BackgroundImage")));
+			this->buttonApplySpeed->BackColor = System::Drawing::Color::Transparent;
 			this->buttonApplySpeed->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->buttonApplySpeed->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"buttonApplySpeed.Image")));
-			this->buttonApplySpeed->Location = System::Drawing::Point(223, 78);
+			this->buttonApplySpeed->Location = System::Drawing::Point(221, 78);
 			this->buttonApplySpeed->Name = L"buttonApplySpeed";
 			this->buttonApplySpeed->Size = System::Drawing::Size(122, 33);
 			this->buttonApplySpeed->TabIndex = 4;
@@ -275,7 +275,7 @@ namespace TheSnakeGame {
 			// 
 			this->numericUpDownSpeedSnake->BackColor = System::Drawing::Color::Black;
 			this->numericUpDownSpeedSnake->ForeColor = System::Drawing::Color::Red;
-			this->numericUpDownSpeedSnake->Location = System::Drawing::Point(229, 27);
+			this->numericUpDownSpeedSnake->Location = System::Drawing::Point(221, 27);
 			this->numericUpDownSpeedSnake->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 200, 0, 0, 0 });
 			this->numericUpDownSpeedSnake->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->numericUpDownSpeedSnake->Name = L"numericUpDownSpeedSnake";
@@ -286,7 +286,7 @@ namespace TheSnakeGame {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label2.Image")));
+			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Location = System::Drawing::Point(19, 29);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(120, 17);
@@ -336,11 +336,10 @@ namespace TheSnakeGame {
 			// labelGameOver
 			// 
 			this->labelGameOver->AutoSize = true;
-			this->labelGameOver->BackColor = System::Drawing::Color::Black;
+			this->labelGameOver->BackColor = System::Drawing::Color::Transparent;
 			this->labelGameOver->Font = (gcnew System::Drawing::Font(L"Sitka Heading", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->labelGameOver->ForeColor = System::Drawing::Color::Red;
-			this->labelGameOver->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"labelGameOver.Image")));
 			this->labelGameOver->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->labelGameOver->Location = System::Drawing::Point(309, 259);
 			this->labelGameOver->Name = L"labelGameOver";
@@ -350,6 +349,17 @@ namespace TheSnakeGame {
 			this->labelGameOver->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->labelGameOver->Visible = false;
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(374, 62);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(131, 110);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox1->TabIndex = 8;
+			this->pictureBox1->TabStop = false;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -357,6 +367,7 @@ namespace TheSnakeGame {
 			this->BackColor = System::Drawing::Color::White;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(901, 740);
+			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->groupBoxGameData);
 			this->Controls->Add(this->RightBorder);
 			this->Controls->Add(this->LeftBorder);
@@ -383,6 +394,7 @@ namespace TheSnakeGame {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->LowerBorder))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->LeftBorder))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->RightBorder))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

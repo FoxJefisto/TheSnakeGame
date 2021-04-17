@@ -159,6 +159,7 @@
     <Image Include="img\head3.png" />
     <Image Include="img\head4.png" />
     <Image Include="img\head5.png" />
+    <Image Include="img\Logo.jpg" />
     <Image Include="img\tail.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

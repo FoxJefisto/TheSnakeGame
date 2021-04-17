@@ -81,5 +81,8 @@
     <Image Include="img\tail.png">
       <Filter>Файлы ресурсов</Filter>
     </Image>
+    <Image Include="img\Logo.jpg">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
   </ItemGroup>
 </Project>
