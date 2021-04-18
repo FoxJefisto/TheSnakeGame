@@ -413,10 +413,11 @@ namespace TheSnakeGame {
 	public:
 			 String^ imgSerpens = "img\\tail.png";
 			 array<String^>^ imgApples;
-			 String^ imgHead1 = "img\\head1.png";
-			 String^ imgHead2 = "img\\head2.png";
-			 String^ imgHead3 = "img\\head3.png";
-			 String^ imgHead4 = "img\\head4.png";
+			 String^ imgHead = "img\\head.png";
+			 Bitmap^ imgHeadRight;
+			 Bitmap^ imgHeadLeft;
+			 Bitmap^ imgHeadUp;
+			 Bitmap^ imgHeadDown;
 
 	//-------------------
 	//Действия игры

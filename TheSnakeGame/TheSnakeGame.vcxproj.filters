@@ -34,11 +34,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="TheSnakeGame.rc">
-      <Filter>Файлы ресурсов</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
     <Image Include="img\apple1.png">
       <Filter>Файлы ресурсов</Filter>
     </Image>
@@ -63,25 +58,13 @@
     <Image Include="img\button.png">
       <Filter>Файлы ресурсов</Filter>
     </Image>
-    <Image Include="img\head1.png">
-      <Filter>Файлы ресурсов</Filter>
-    </Image>
-    <Image Include="img\head2.png">
-      <Filter>Файлы ресурсов</Filter>
-    </Image>
-    <Image Include="img\head3.png">
-      <Filter>Файлы ресурсов</Filter>
-    </Image>
-    <Image Include="img\head4.png">
-      <Filter>Файлы ресурсов</Filter>
-    </Image>
-    <Image Include="img\head5.png">
-      <Filter>Файлы ресурсов</Filter>
-    </Image>
     <Image Include="img\tail.png">
       <Filter>Файлы ресурсов</Filter>
     </Image>
     <Image Include="img\Logo.jpg">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="img\head.png">
       <Filter>Файлы ресурсов</Filter>
     </Image>
   </ItemGroup>

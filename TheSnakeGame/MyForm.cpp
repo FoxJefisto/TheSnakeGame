@@ -33,6 +33,17 @@ TheSnakeGame::MyForm::MyForm(void)
 	gameArea.X = 640;
 	gameArea.Y = 570;
 
+	imgHeadUp = gcnew Bitmap(imgHead);
+
+	imgHeadDown = gcnew Bitmap(imgHead);
+	imgHeadDown->RotateFlip(RotateFlipType::Rotate180FlipNone);
+	
+	imgHeadLeft = gcnew Bitmap(imgHead);
+	imgHeadLeft->RotateFlip(RotateFlipType::Rotate270FlipNone);
+
+	imgHeadRight = gcnew Bitmap(imgHead);
+	imgHeadRight->RotateFlip(RotateFlipType::Rotate90FlipNone);
+
 	firstLaunch = true;
 	NewGame();
 }
@@ -132,7 +143,7 @@ void TheSnakeGame::MyForm::NewGame()
 	Serpens = gcnew array <PictureBox^>(400);
 	Serpens[0] = gcnew PictureBox();
 	Serpens[0]->Location = Point(210, 370);
-	Serpens[0]->Image = gcnew Bitmap(imgHead1); //голова будет зеленой
+	Serpens[0]->Image = imgHeadRight; //голова будет зеленой
 	Serpens[0]->Width = step;
 	Serpens[0]->Height = step;
 	score = 0;
@@ -262,22 +273,22 @@ System::Void TheSnakeGame::MyForm::MyForm_KeyDown(System::Object^ sender, System
 	if (e->KeyCode.ToString() == "Right") {
 		direction.X = 1;
 		direction.Y = 0;
-		Serpens[0]->Image = gcnew Bitmap(imgHead1);
+		Serpens[0]->Image = imgHeadRight;
 	}
 	else if (e->KeyCode.ToString() == "Left") {
 		direction.X = -1;
 		direction.Y = 0;
-		Serpens[0]->Image = gcnew Bitmap(imgHead3);
+		Serpens[0]->Image = imgHeadLeft;
 	}
 	else if (e->KeyCode.ToString() == "Up") {
 		direction.X = 0;
 		direction.Y = -1;
-		Serpens[0]->Image = gcnew Bitmap(imgHead2);
+		Serpens[0]->Image = imgHeadUp;
 	}
 	else if (e->KeyCode.ToString() == "Down") {
 		direction.X = 0;
 		direction.Y = 1;
-		Serpens[0]->Image = gcnew Bitmap(imgHead4);
+		Serpens[0]->Image = imgHeadDown;
 	}
 	return System::Void();
 }

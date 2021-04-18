@@ -143,9 +143,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="TheSnakeGame.rc" />
-  </ItemGroup>
-  <ItemGroup>
     <Image Include="img\apple1.png" />
     <Image Include="img\apple2.png" />
     <Image Include="img\apple3.png" />
@@ -154,11 +151,7 @@
     <Image Include="img\apple6.png" />
     <Image Include="img\apple7.png" />
     <Image Include="img\button.png" />
-    <Image Include="img\head1.png" />
-    <Image Include="img\head2.png" />
-    <Image Include="img\head3.png" />
-    <Image Include="img\head4.png" />
-    <Image Include="img\head5.png" />
+    <Image Include="img\head.png" />
     <Image Include="img\Logo.jpg" />
     <Image Include="img\tail.png" />
   </ItemGroup>
