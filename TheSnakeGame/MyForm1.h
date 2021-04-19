@@ -16,7 +16,7 @@ namespace TheSnakeGame {
 	{
 	public:
 		MyForm1();
-		MyForm1(String^ img);
+		MyForm1(String^ head, String^ tail);
 	protected:
 		/// <summary>
 		/// Освободить все используемые ресурсы.
@@ -71,6 +71,7 @@ namespace TheSnakeGame {
 			this->buttonEditHead->TabIndex = 1;
 			this->buttonEditHead->Text = L"Изменить голову";
 			this->buttonEditHead->UseVisualStyleBackColor = true;
+			this->buttonEditHead->Click += gcnew System::EventHandler(this, &MyForm1::buttonEditHead_Click);
 			// 
 			// MyForm1
 			// 
@@ -96,9 +97,13 @@ namespace TheSnakeGame {
 		int size = 10;
 		void EditSerpens(); //Анимация змеи
 	private: System::Void buttonEditTail_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void buttonEditHead_Click(System::Object^ sender, System::EventArgs^ e);
 	public:
-		String^ GetImage() {
+		String^ GetImageTail() {
 			return imgTail;
+		}
+		String^ GetImageHead() {
+			return imgHead;
 		}
 	};
 }

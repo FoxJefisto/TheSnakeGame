@@ -445,8 +445,9 @@ namespace TheSnakeGame {
 
 	//Событие по обновлению игры - указывается в timer
 	private: void MyForm_Update(Object^ object, EventArgs^ e);
-	private: System::Void buttonEdit_Click(System::Object^ sender, System::EventArgs^ e);
 	//----------------------------------------
 	//Изменение внешнего вида
+	private: System::Void buttonEdit_Click(System::Object^ sender, System::EventArgs^ e);
+	private: void MakeHead(String^ head);
 };
 }

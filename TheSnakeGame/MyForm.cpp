@@ -33,16 +33,7 @@ TheSnakeGame::MyForm::MyForm(void)
 	gameArea.X = 640;
 	gameArea.Y = 570;
 
-	imgHeadUp = gcnew Bitmap(imgHead);
-
-	imgHeadDown = gcnew Bitmap(imgHead);
-	imgHeadDown->RotateFlip(RotateFlipType::Rotate180FlipNone);
-	
-	imgHeadLeft = gcnew Bitmap(imgHead);
-	imgHeadLeft->RotateFlip(RotateFlipType::Rotate270FlipNone);
-
-	imgHeadRight = gcnew Bitmap(imgHead);
-	imgHeadRight->RotateFlip(RotateFlipType::Rotate90FlipNone);
+	MakeHead(imgHead);
 
 	firstLaunch = true;
 	NewGame();
@@ -316,14 +307,31 @@ void TheSnakeGame::MyForm::MyForm_Update(Object^ object, EventArgs^ e)
 		MessageBox::Show("Игра приостановлена!", "Внимание!");
 	}
 }
-
+//Изменение внешнего вида
 System::Void TheSnakeGame::MyForm::buttonEdit_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	MyForm1^ form1 = gcnew MyForm1(imgSerpens);
+	MyForm1^ form1 = gcnew MyForm1(imgHead, imgSerpens);
 	form1->ShowDialog();
-		imgSerpens = form1->GetImage();
-		if (form1->isEdit)
+		if (form1->isEdit) {
+			imgSerpens = form1->GetImageTail();
+			imgHead = form1->GetImageHead();
+			MakeHead(imgHead);
 			for (int i = 1; i <= score; i++)
 				Serpens[i]->Image = gcnew Bitmap(imgSerpens);
+		}
 	return System::Void();
+}
+//создание всех направлений головы
+void TheSnakeGame::MyForm::MakeHead(String^ head)
+{
+	imgHeadUp = gcnew Bitmap(head);
+
+	imgHeadDown = gcnew Bitmap(head);
+	imgHeadDown->RotateFlip(RotateFlipType::Rotate180FlipNone);
+
+	imgHeadLeft = gcnew Bitmap(head);
+	imgHeadLeft->RotateFlip(RotateFlipType::Rotate270FlipNone);
+
+	imgHeadRight = gcnew Bitmap(head);
+	imgHeadRight->RotateFlip(RotateFlipType::Rotate90FlipNone);
 }

@@ -4,16 +4,16 @@
 TheSnakeGame::MyForm1::MyForm1()
 {
 		InitializeComponent();
-		imgHead = "img\\head2.png";
+		imgHead = "img\\head.png";
 		imgTail = "img\\tail.png";
 		EditSerpens();
 }
 
-TheSnakeGame::MyForm1::MyForm1(String^ img)
+TheSnakeGame::MyForm1::MyForm1(String^ head, String^ tail)
 {
 	InitializeComponent();
-	imgHead = "img\\head2.png";
-	imgTail = img;
+	imgHead = head;
+	imgTail = tail;
 	EditSerpens();
 }
 
@@ -47,6 +47,18 @@ System::Void TheSnakeGame::MyForm1::buttonEditTail_Click(System::Object^ sender,
 	for (int i = 1; i < 10; i++)
 		SerpensCur[i]->Image = gcnew Bitmap(imgTail);
 	isEdit = true;
+	}
+	return System::Void();
+}
+
+System::Void TheSnakeGame::MyForm1::buttonEditHead_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	OpenFileDialog^ ofd = gcnew OpenFileDialog();
+	ofd->Filter = "Image Files (*BMP;*.JPG;*.GIF;*.PNG)|*BMP;*.JPG;*.GIF;*.PNG|All Files (*.*)|*.*";
+	if (ofd->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
+		imgHead = ofd->FileName;
+		SerpensCur[0]->Image = gcnew Bitmap(imgHead);
+		isEdit = true;
 	}
 	return System::Void();
 }
